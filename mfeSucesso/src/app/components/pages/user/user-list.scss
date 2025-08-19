@@ -1,0 +1,32 @@
+:host {
+    display: inline-block;
+}
+
+.table {
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+    color: #333333;
+    min-width: 600px;
+
+    th {
+        border: 1px solid #cccccc;
+        padding: 4px 10px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd){
+                background-color: #f5f5f5;
+            }
+
+            td {
+                border: 1px solid #cccccc;
+                padding: 4px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}

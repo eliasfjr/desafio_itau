@@ -1,0 +1,13 @@
+<div class="layout-sidebar">
+    <div class="layout-sidebar-root-text">
+        <span>Menu</span>
+    </div>
+    <div class="layout-sidebar-menu">
+        <ul class="layout-sidebar-menu__ul">
+            <li *ngFor="let item of routes" routerLink="{{item.route}}" [class.isActive]="item.active">
+                <span class="material-icons-outlined">{{item.icon}}</span>
+                <a href="javascript:void(0);">{{item.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

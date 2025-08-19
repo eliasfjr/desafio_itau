@@ -1,0 +1,215 @@
+{
+  "name": "",
+  "shared": [
+    {
+      "packageName": "@angular/animations",
+      "outFileName": "_angular_animations.lOMNogsWKU-dev.js",
+      "requiredVersion": "^20.1.7",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/animations/browser",
+      "outFileName": "_angular_animations_browser.z4mvyDwDFT-dev.js",
+      "requiredVersion": "^20.1.7",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/common",
+      "outFileName": "_angular_common.hjHpTJV8d1-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/common/http",
+      "outFileName": "_angular_common_http.bdymJbgl-G-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/core",
+      "outFileName": "_angular_core.kTOs-HDk7U-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/core/primitives/di",
+      "outFileName": "_angular_core_primitives_di.nefmrJUnbG-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/core/primitives/signals",
+      "outFileName": "_angular_core_primitives_signals.KW980kbn7P-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/core/rxjs-interop",
+      "outFileName": "_angular_core_rxjs_interop.gmCDO5UEeY-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/forms",
+      "outFileName": "_angular_forms.60nb-ktq9r-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/platform-browser",
+      "outFileName": "_angular_platform_browser.I7GqyBRy3L-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/platform-browser/animations",
+      "outFileName": "_angular_platform_browser_animations.1Df7tywc-b-dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@angular/router",
+      "outFileName": "_angular_router.v4j-b9SZC--dev.js",
+      "requiredVersion": "^20.1.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "20.1.7"
+    },
+    {
+      "packageName": "@ng-bootstrap/ng-bootstrap",
+      "outFileName": "_ng_bootstrap_ng_bootstrap.J3v2uov_8o-dev.js",
+      "requiredVersion": "^19.0.1",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "19.0.1"
+    },
+    {
+      "packageName": "ngx-toastr",
+      "outFileName": "ngx_toastr.2D5xo3Vj8G-dev.js",
+      "requiredVersion": "^19.0.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "19.0.0"
+    },
+    {
+      "packageName": "rxjs",
+      "outFileName": "rxjs.fznfpWs0hu-dev.js",
+      "requiredVersion": "~7.8.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "7.8.2"
+    },
+    {
+      "packageName": "rxjs/operators",
+      "outFileName": "rxjs_operators.FF0JwnERxC-dev.js",
+      "requiredVersion": "~7.8.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "7.8.2"
+    },
+    {
+      "packageName": "tslib",
+      "outFileName": "tslib.ud4Sj9ChOJ-dev.js",
+      "requiredVersion": "^2.3.0",
+      "singleton": true,
+      "strictVersion": true,
+      "version": "2.8.1"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-KIHSKLLA",
+      "outFileName": "chunk-KIHSKLLA.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-GUPSMPXL",
+      "outFileName": "chunk-GUPSMPXL.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-5EOSH2O6",
+      "outFileName": "chunk-5EOSH2O6.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-45SKNTCV",
+      "outFileName": "chunk-45SKNTCV.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-K77IIBMW",
+      "outFileName": "chunk-K77IIBMW.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-AD6WK7ZC",
+      "outFileName": "chunk-AD6WK7ZC.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-WXYJN4O7",
+      "outFileName": "chunk-WXYJN4O7.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-UNJEACRS",
+      "outFileName": "chunk-UNJEACRS.js"
+    },
+    {
+      "singleton": false,
+      "strictVersion": false,
+      "requiredVersion": "0.0.0",
+      "version": "0.0.0",
+      "packageName": "@nf-internal/chunk-WDMUDEB6",
+      "outFileName": "chunk-WDMUDEB6.js"
+    }
+  ],
+  "exposes": [],
+  "buildNotificationsEndpoint": "/@angular-architects/native-federation:build-notifications"
+}

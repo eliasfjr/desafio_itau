@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'material-icons/iconfont/material-icons.scss';
+@use 'ngx-toastr/toastr';
+// or for Bootstrap 5 styled alerts:
+// @import 'ngx-toastr/toastr-bs5-alert';
+
+:root {
+    --menu-bg: #ffffff;
+    --root-menuitem-text-color: #999999;
+    --surface-card: #ffffff;
+    --sub-title-color: #176fbb;
+    --text-color-secondary: #888888;
+    --transition-duration: 0.2s;
+    --topbar-item-text-color: #ffffff;
+    --topbar-bg: linear-gradient(90deg,#135394 0%, #1b88df 100%);
+}
+
+html body {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 0;
+}
+
+* {
+    font-family: "segoe ui";
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.card {
+    background-color: var(--surface-card);
+    margin-bottom: 2rem;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.card:last-child {
+    margin-bottom: 0px;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.sub-title {
+    color: var(--sub-title-color);
+    font-weight: 700;
+    margin: 0px 0px 14px 0px;
+    font-size: 24px;
+}

@@ -1,0 +1,18 @@
+.layout-header__nav {
+    ol {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 5px 0px;
+        list-style: none;
+        gap: .5rem;
+        flex-wrap: wrap;
+        color: var(--text-color-secondary);
+
+        li {
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
+    }
+}

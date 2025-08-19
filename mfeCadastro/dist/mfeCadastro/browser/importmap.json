@@ -1,0 +1,26 @@
+{
+  "imports": {
+    "@angular/animations": "_angular_animations.iJE9J_TqiB-dev.js",
+    "@angular/animations/browser": "_angular_animations_browser.6OSiRL9u1c-dev.js",
+    "@angular/common": "_angular_common.RoIFog7HGO-dev.js",
+    "@angular/common/http": "_angular_common_http.oTiYByQnc1-dev.js",
+    "@angular/core": "_angular_core.nbvJQtz9qh-dev.js",
+    "@angular/core/primitives/di": "_angular_core_primitives_di.jW_8e8Eewt-dev.js",
+    "@angular/core/primitives/signals": "_angular_core_primitives_signals.Cg74mBiiye-dev.js",
+    "@angular/forms": "_angular_forms.qoYDDKbty1-dev.js",
+    "@angular/platform-browser": "_angular_platform_browser.wg19tDeZFA-dev.js",
+    "@angular/platform-browser/animations": "_angular_platform_browser_animations.BHLvJMiqWt-dev.js",
+    "@angular/router": "_angular_router.BtwOkP67TZ-dev.js",
+    "ngx-toastr": "ngx_toastr.pc6T9muVpD-dev.js",
+    "rxjs": "rxjs.NUZVGrMywl-dev.js",
+    "rxjs/operators": "rxjs_operators.US5OWl9gfn-dev.js",
+    "tslib": "tslib.HG7PgLFoV4-dev.js",
+    "@nf-internal/chunk-KIHSKLLA": "chunk-KIHSKLLA.js",
+    "@nf-internal/chunk-GUPSMPXL": "chunk-GUPSMPXL.js",
+    "@nf-internal/chunk-5EOSH2O6": "chunk-5EOSH2O6.js",
+    "@nf-internal/chunk-45SKNTCV": "chunk-45SKNTCV.js",
+    "@nf-internal/chunk-WXYJN4O7": "chunk-WXYJN4O7.js",
+    "@nf-internal/chunk-Z6ORXLZR": "chunk-Z6ORXLZR.js",
+    "@nf-internal/chunk-WDMUDEB6": "chunk-WDMUDEB6.js"
+  }
+}

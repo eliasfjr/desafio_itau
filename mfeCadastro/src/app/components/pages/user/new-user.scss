@@ -1,0 +1,67 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
+    label {
+        font-weight: 600;
+        font-size: 15px;
+        color: #333333;
+        margin-bottom: 5px;
+    }
+
+    input {
+        padding: 6px 8px;
+        border: 1px solid #bbbbbb;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        cursor: pointer;
+        padding: 7px 22px;
+        margin-left: 10px;
+        font-weight: 600;
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: no-drop;
+        }
+
+        &-sucess {
+            border-radius: 3px;
+            border: 0px solid green;
+            background: #0e890e;
+            color: #ffffff;
+            transition: 0.1s ease-in all;
+
+            &:hover {
+                background: #086b08;
+            }
+        }
+
+        &-primary {
+            border-radius: 3px;
+            border: 1px solid #9d9d9d;
+            background: #ffffff;
+            color: #4a4a4a;
+            transition: 0.1s ease-in all;
+
+            &:hover {
+                background: #eeeeee;
+            }
+        }
+    }
+}

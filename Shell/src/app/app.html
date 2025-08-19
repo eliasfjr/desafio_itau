@@ -1,0 +1,19 @@
+<div class="layout">
+    <div class="layout-topbar">
+        <img class="layout-topbar__img" src="img/itau-logo.png" alt="Itaú">
+        <div class="layout-topbar-text">
+            <h3 class="layout-topbar-text__h3">Meu</h3>
+            <h2 class="layout-topbar-text__h2">Desafio</h2>
+        </div>
+    </div>
+    <app-sidebar></app-sidebar>
+    <div class="layout-wrapper">
+        <div class="layout-wrapper-header">
+            <app-layout-header></app-layout-header>
+        </div>
+        <div class="layout-wrapper-content">
+            <router-outlet />
+            <footer></footer>
+        </div>
+    </div>
+</div>

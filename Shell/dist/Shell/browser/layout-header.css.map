@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/molecules/layout-header/layout-header.scss"],
+  "sourcesContent": [".layout-header__nav {\r\n    ol {\r\n        display: flex;\r\n        align-items: center;\r\n        margin: 0;\r\n        padding: 5px 0px;\r\n        list-style: none;\r\n        gap: .5rem;\r\n        flex-wrap: wrap;\r\n        color: var(--text-color-secondary);\r\n\r\n        li {\r\n            display: flex;\r\n            align-items: center;\r\n            line-height: 1;\r\n        }\r\n    }\r\n}"],
+  "mappings": ";AACI,CAAA,mBAAA;AACI,WAAA;AACA,eAAA;AACA,UAAA;AACA,WAAA,IAAA;AACA,cAAA;AACA,OAAA;AACA,aAAA;AACA,SAAA,IAAA;;AAEA,CAVJ,mBAUI,GAAA;AACI,WAAA;AACA,eAAA;AACA,eAAA;;",
+  "names": []
+}

@@ -1,0 +1,30 @@
+{
+  "imports": {
+    "@angular/animations": "_angular_animations.lOMNogsWKU-dev.js",
+    "@angular/animations/browser": "_angular_animations_browser.z4mvyDwDFT-dev.js",
+    "@angular/common": "_angular_common.hjHpTJV8d1-dev.js",
+    "@angular/common/http": "_angular_common_http.bdymJbgl-G-dev.js",
+    "@angular/core": "_angular_core.kTOs-HDk7U-dev.js",
+    "@angular/core/primitives/di": "_angular_core_primitives_di.nefmrJUnbG-dev.js",
+    "@angular/core/primitives/signals": "_angular_core_primitives_signals.KW980kbn7P-dev.js",
+    "@angular/core/rxjs-interop": "_angular_core_rxjs_interop.gmCDO5UEeY-dev.js",
+    "@angular/forms": "_angular_forms.60nb-ktq9r-dev.js",
+    "@angular/platform-browser": "_angular_platform_browser.I7GqyBRy3L-dev.js",
+    "@angular/platform-browser/animations": "_angular_platform_browser_animations.1Df7tywc-b-dev.js",
+    "@angular/router": "_angular_router.v4j-b9SZC--dev.js",
+    "@ng-bootstrap/ng-bootstrap": "_ng_bootstrap_ng_bootstrap.J3v2uov_8o-dev.js",
+    "ngx-toastr": "ngx_toastr.2D5xo3Vj8G-dev.js",
+    "rxjs": "rxjs.fznfpWs0hu-dev.js",
+    "rxjs/operators": "rxjs_operators.FF0JwnERxC-dev.js",
+    "tslib": "tslib.ud4Sj9ChOJ-dev.js",
+    "@nf-internal/chunk-KIHSKLLA": "chunk-KIHSKLLA.js",
+    "@nf-internal/chunk-GUPSMPXL": "chunk-GUPSMPXL.js",
+    "@nf-internal/chunk-5EOSH2O6": "chunk-5EOSH2O6.js",
+    "@nf-internal/chunk-45SKNTCV": "chunk-45SKNTCV.js",
+    "@nf-internal/chunk-K77IIBMW": "chunk-K77IIBMW.js",
+    "@nf-internal/chunk-AD6WK7ZC": "chunk-AD6WK7ZC.js",
+    "@nf-internal/chunk-WXYJN4O7": "chunk-WXYJN4O7.js",
+    "@nf-internal/chunk-UNJEACRS": "chunk-UNJEACRS.js",
+    "@nf-internal/chunk-WDMUDEB6": "chunk-WDMUDEB6.js"
+  }
+}
