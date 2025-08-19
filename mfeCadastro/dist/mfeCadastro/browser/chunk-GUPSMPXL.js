@@ -57,7 +57,9 @@ var Subscription = function () {
                         }
                     }
                     catch (e_1_1) {
-                        e_1 = { error: e_1_1 };
+                        e_1 = {
+                            error: e_1_1
+                        };
                     }
                     finally {
                         try {
@@ -104,7 +106,9 @@ var Subscription = function () {
                     }
                 }
                 catch (e_2_1) {
-                    e_2 = { error: e_2_1 };
+                    e_2 = {
+                        error: e_2_1
+                    };
                 }
                 finally {
                     try {
@@ -191,8 +195,7 @@ var config = {
     useDeprecatedNextContext: false
 };
 // node_modules/rxjs/dist/esm5/internal/util/noop.js
-function noop() {
-}
+function noop() { }
 // node_modules/rxjs/dist/esm5/internal/Subscriber.js
 import { __extends } from "tslib";
 // node_modules/rxjs/dist/esm5/internal/scheduler/timeoutProvider.js
@@ -250,7 +253,10 @@ function errorContext(cb) {
     if (config.useDeprecatedSynchronousErrorHandling) {
         var isRoot = !context;
         if (isRoot) {
-            context = { errorThrown: false, error: null };
+            context = {
+                errorThrown: false,
+                error: null
+            };
         }
         cb();
         if (isRoot) {
@@ -773,7 +779,9 @@ var Subject = function (_super) {
                     }
                 }
                 catch (e_1_1) {
-                    e_1 = { error: e_1_1 };
+                    e_1 = {
+                        error: e_1_1
+                    };
                 }
                 finally {
                     try {
@@ -1435,7 +1443,9 @@ function fromIterable(iterable) {
             }
         }
         catch (e_1_1) {
-            e_1 = { error: e_1_1 };
+            e_1 = {
+                error: e_1_1
+            };
         }
         finally {
             try {
@@ -1488,7 +1498,9 @@ function process(asyncIterable, subscriber) {
                     return [3, 11];
                 case 5:
                     e_2_1 = _b.sent();
-                    e_2 = { error: e_2_1 };
+                    e_2 = {
+                        error: e_2_1
+                    };
                     return [3, 11];
                 case 6:
                     _b.trys.push([6, , 9, 10]);
@@ -1763,7 +1775,11 @@ var TimeoutError = createErrorClass(function (_super) {
     };
 });
 function timeout(config2, schedulerArg) {
-    var _a = isValidDate(config2) ? { first: config2 } : typeof config2 === "number" ? { each: config2 } : config2, first2 = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
+    var _a = isValidDate(config2) ? {
+        first: config2
+    } : typeof config2 === "number" ? {
+        each: config2
+    } : config2, first2 = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
     if (first2 == null && each == null) {
         throw new TypeError("No timeout provided.");
     }
@@ -1822,7 +1838,10 @@ function argsArgArrayOrObject(args) {
     if (args.length === 1) {
         var first_1 = args[0];
         if (isArray(first_1)) {
-            return { args: first_1, keys: null };
+            return {
+                args: first_1,
+                keys: null
+            };
         }
         if (isPOJO(first_1)) {
             var keys = getKeys(first_1);
@@ -1834,7 +1853,10 @@ function argsArgArrayOrObject(args) {
             };
         }
     }
-    return { args, keys: null };
+    return {
+        args,
+        keys: null
+    };
 }
 function isPOJO(obj) {
     return obj && typeof obj === "object" && getPrototypeOf(obj) === objectProto;
@@ -2276,7 +2298,9 @@ function bufferCount(bufferSize, startBufferEvery) {
                 }
             }
             catch (e_1_1) {
-                e_1 = { error: e_1_1 };
+                e_1 = {
+                    error: e_1_1
+                };
             }
             finally {
                 try {
@@ -2297,7 +2321,9 @@ function bufferCount(bufferSize, startBufferEvery) {
                     }
                 }
                 catch (e_2_1) {
-                    e_2 = { error: e_2_1 };
+                    e_2 = {
+                        error: e_2_1
+                    };
                 }
                 finally {
                     try {
@@ -2319,7 +2345,9 @@ function bufferCount(bufferSize, startBufferEvery) {
                 }
             }
             catch (e_3_1) {
-                e_3 = { error: e_3_1 };
+                e_3 = {
+                    error: e_3_1
+                };
             }
             finally {
                 try {
@@ -2392,7 +2420,9 @@ function bufferTime(bufferTimeSpan) {
                 }
             }
             catch (e_1_1) {
-                e_1 = { error: e_1_1 };
+                e_1 = {
+                    error: e_1_1
+                };
             }
             finally {
                 try {
@@ -2442,7 +2472,9 @@ function bufferToggle(openings, closingSelector) {
                 }
             }
             catch (e_1_1) {
-                e_1 = { error: e_1_1 };
+                e_1 = {
+                    error: e_1_1
+                };
             }
             finally {
                 try {
@@ -3072,7 +3104,9 @@ function takeLast(count2) {
                 }
             }
             catch (e_1_1) {
-                e_1 = { error: e_1_1 };
+                e_1 = {
+                    error: e_1_1
+                };
             }
             finally {
                 try {
@@ -3831,7 +3865,11 @@ function takeWhile(predicate, inclusive) {
 }
 // node_modules/rxjs/dist/esm5/internal/operators/tap.js
 function tap(observerOrNext, error, complete) {
-    var tapObserver = isFunction(observerOrNext) || error || complete ? { next: observerOrNext, error, complete } : observerOrNext;
+    var tapObserver = isFunction(observerOrNext) || error || complete ? {
+        next: observerOrNext,
+        error,
+        complete
+    } : observerOrNext;
     return tapObserver ? operate(function (source, subscriber) {
         var _a;
         (_a = tapObserver.subscribe) === null || _a === void 0 ? void 0 : _a.call(tapObserver);
@@ -3969,7 +4007,10 @@ function timestamp(timestampProvider) {
         timestampProvider = dateTimestampProvider;
     }
     return map(function (value) {
-        return { value, timestamp: timestampProvider.now() };
+        return {
+            value,
+            timestamp: timestampProvider.now()
+        };
     });
 }
 // node_modules/rxjs/dist/esm5/internal/operators/window.js
@@ -4018,7 +4059,9 @@ function windowCount(windowSize, startWindowEvery) {
                 }
             }
             catch (e_1_1) {
-                e_1 = { error: e_1_1 };
+                e_1 = {
+                    error: e_1_1
+                };
             }
             finally {
                 try {
@@ -4170,7 +4213,9 @@ function windowToggle(openings, closingSelector) {
                 }
             }
             catch (e_1_1) {
-                e_1 = { error: e_1_1 };
+                e_1 = {
+                    error: e_1_1
+                };
             }
             finally {
                 try {
@@ -4296,4 +4341,3 @@ function not(pred, thisArg) {
     };
 }
 export { isFunction, UnsubscriptionError, Subscription, config, noop, Subscriber, SafeSubscriber, observable, identity, pipe, Observable, createOperatorSubscriber, refCount, ConnectableObservable, ObjectUnsubscribedError, Subject, BehaviorSubject, ReplaySubject, AsyncSubject, AsyncAction, Scheduler, AsyncScheduler, asyncScheduler, async, EMPTY, empty, isScheduler, popResultSelector, popScheduler, popNumber, isArrayLike, innerFrom, observeOn, subscribeOn, scheduleIterable, scheduled, from, of, throwError, NotificationKind, Notification, EmptyError, ArgumentOutOfRangeError, NotFoundError, SequenceError, TimeoutError, timeout, map, mapOneOrManyArgs, argsArgArrayOrObject, createObject, combineLatest, mergeMap, mergeAll, concatAll, concat, timer, interval, argsOrArgArray, onErrorResumeNext, not, filter, race, zip, audit, auditTime, buffer, bufferCount, bufferTime, bufferToggle, bufferWhen, catchError, reduce, toArray, combineLatestAll, combineAll, combineLatest2, combineLatestWith, concatMap, concatMapTo, concat2, concatWith, connect, count, debounce, debounceTime, defaultIfEmpty, take, ignoreElements, mapTo, delayWhen, delay, dematerialize, distinct, distinctUntilChanged, distinctUntilKeyChanged, throwIfEmpty, elementAt, endWith, every, exhaustMap, exhaustAll, exhaust, expand, finalize, find, findIndex, first, groupBy, isEmpty, takeLast, last2 as last, materialize, max, flatMap, mergeMapTo, mergeScan, merge, mergeWith, min, multicast, onErrorResumeNextWith, onErrorResumeNext2, pairwise, pluck, publish, publishBehavior, publishLast, publishReplay, raceWith, repeat, repeatWhen, retry, retryWhen, sample, sampleTime, scan, sequenceEqual, share, shareReplay, single, skip, skipLast, skipUntil, skipWhile, startWith, switchMap, switchAll, switchMapTo, switchScan, takeUntil, takeWhile, tap, throttle, throttleTime, timeInterval, timeoutWith, timestamp, window, windowCount, windowTime, windowToggle, windowWhen, withLatestFrom, zipAll, zip2, zipWith };
-//# sourceMappingURL=chunk-GUPSMPXL.js.map

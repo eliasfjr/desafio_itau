@@ -35,12 +35,9 @@ var REACTIVE_NODE = {
     consumerIsAlwaysLive: false,
     kind: "unknown",
     producerMustRecompute: () => false,
-    producerRecomputeValue: () => {
-    },
-    consumerMarkedDirty: () => {
-    },
-    consumerOnSignalRead: () => {
-    }
+    producerRecomputeValue: () => { },
+    consumerMarkedDirty: () => { },
+    consumerOnSignalRead: () => { }
 };
 function producerAccessed(node) {
     if (inNotificationPhase) {
@@ -65,8 +62,9 @@ function producerAccessed(node) {
         }
     }
     const prevConsumerLink = node.consumersTail;
-    if (prevConsumerLink !== void 0 && prevConsumerLink.consumer === activeConsumer && // However, we have to make sure that the link we've discovered isn't from a node that is incrementally rebuilding its producer list
-        (!isRecomputing || isValidLink(prevConsumerLink, activeConsumer))) {
+    if (prevConsumerLink !== void 0 && prevConsumerLink.consumer === activeConsumer && (
+    // However, we have to make sure that the link we've discovered isn't from a node that is incrementally rebuilding its producer list
+    !isRecomputing || isValidLink(prevConsumerLink, activeConsumer))) {
         return;
     }
     const isLive = consumerIsLive(activeConsumer);
@@ -355,8 +353,8 @@ function createSignal(initialValue, equal) {
         getter.toString = () => `[Signal${debugName}: ${node.value}]`;
     }
     runPostProducerCreatedFn(node);
-    const set = (newValue) => signalSetFn(node, newValue);
-    const update = (updateFn) => signalUpdateFn(node, updateFn);
+    const set = newValue => signalSetFn(node, newValue);
+    const update = updateFn => signalUpdateFn(node, updateFn);
     return [getter, set, update];
 }
 function setPostSignalSetFn(fn) {
@@ -487,8 +485,7 @@ function untracked(nonReactiveReadsFn) {
     }
 }
 // node_modules/@angular/core/fesm2022/weak_ref.mjs
-function setAlternateWeakRefImpl(impl) {
-}
+function setAlternateWeakRefImpl(impl) { }
 export { defaultEquals, SIGNAL, setActiveConsumer, getActiveConsumer, isInNotificationPhase, isReactive, REACTIVE_NODE, producerAccessed, producerIncrementEpoch, producerUpdateValueVersion, producerNotifyConsumers, producerUpdatesAllowed, consumerMarkDirty, producerMarkClean, consumerBeforeComputation, consumerAfterComputation, consumerPollProducersForChange, consumerDestroy, runPostProducerCreatedFn, setPostProducerCreatedFn, createComputed, setThrowInvalidWriteToSignalError, createSignal, setPostSignalSetFn, signalGetFn, signalSetFn, signalUpdateFn, runPostSignalSetFn, SIGNAL_NODE, createLinkedSignal, linkedSignalSetFn, linkedSignalUpdateFn, untracked, setAlternateWeakRefImpl };
 /*! Bundled license information:
 
@@ -500,5 +497,4 @@ export { defaultEquals, SIGNAL, setActiveConsumer, getActiveConsumer, isInNotifi
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
-*/
-//# sourceMappingURL=chunk-Z6ORXLZR.js.map
+*/ 

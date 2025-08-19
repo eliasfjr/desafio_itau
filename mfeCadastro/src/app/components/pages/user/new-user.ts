@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../../services/user/user-service';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './new-user.html',
   styleUrl: './new-user.scss'
 })
-export class NewUser {
+export class NewUser implements OnInit{
 
   public userForm: FormGroup;
 
@@ -28,6 +28,14 @@ export class NewUser {
         this.toastr.success('Usuário cadastrado com sucesso!', 'Success');
         this.router.navigate(["/mfeSucesso"]);
       });
+  }
+
+  public updateTitle(title: string, icon: string) {
+    window.dispatchEvent(new CustomEvent("updateTitle", { detail: { title: title, icon:  icon} }));
+  }
+
+  public ngOnInit(): void {
+    this.updateTitle("Cadastro de usuários","supervisor_account");
   }
 
   public onSubmit() {

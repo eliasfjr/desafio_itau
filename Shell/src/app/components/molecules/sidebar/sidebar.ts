@@ -13,8 +13,8 @@ export class Sidebar {
 
   public routes: RouteLink[] = [
     {title: "Home", route: "/", icon: "home", active: true},
-    {title: "Cadastro de Usuários", route: "/mfeCadastro", icon: "supervisor_account", active: false},
-    {title: "Lista de Usuários", route: "/mfeSucesso", icon: "view_headline", active: false}
+    {title: "Cadastro de usuários", route: "/mfeCadastro", icon: "supervisor_account", active: false},
+    {title: "Lista de usuários", route: "/mfeSucesso", icon: "view_headline", active: false}
   ]
 
   constructor(private location: Location) {

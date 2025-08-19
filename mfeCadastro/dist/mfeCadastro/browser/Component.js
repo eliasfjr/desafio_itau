@@ -72,6 +72,12 @@ var NewUser = class _NewUser {
       this.router.navigate(["/mfeSucesso"]);
     });
   }
+  updateTitle(title, icon) {
+    window.dispatchEvent(new CustomEvent("updateTitle", { detail: { title, icon } }));
+  }
+  ngOnInit() {
+    this.updateTitle("Cadastro de usu\xE1rios", "supervisor_account");
+  }
   onSubmit() {
     if (this.userForm.valid) {
       this.addUser();

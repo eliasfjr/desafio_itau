@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,6 +7,14 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
-export class Home {
+export class Home implements OnInit {
+
+  public updateTitle(title: string, icon: string) {
+    window.dispatchEvent(new CustomEvent("updateTitle", { detail: { title: title, icon: icon } }));
+  }
+
+  public ngOnInit(): void {
+    this.updateTitle("Home", "home");
+  }
 
 }

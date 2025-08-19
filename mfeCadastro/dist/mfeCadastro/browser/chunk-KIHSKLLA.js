@@ -1,8 +1,8 @@
 import { __spreadProps, __spreadValues } from "@nf-internal/chunk-WDMUDEB6";
 // node_modules/@angular/platform-browser/fesm2022/dom_renderer.mjs
-import { DOCUMENT, \u0275getDOM as _getDOM } from "@angular/common";
+import { DOCUMENT, ɵgetDOM as _getDOM } from "@angular/common";
 import * as i0 from "@angular/core";
-import { InjectionToken, \u0275RuntimeError as _RuntimeError, Injectable, Inject, APP_ID, CSP_NONCE, PLATFORM_ID, Optional, ViewEncapsulation, \u0275TracingService as _TracingService, RendererStyleFlags2 } from "@angular/core";
+import { InjectionToken, ɵRuntimeError as _RuntimeError, Injectable, Inject, APP_ID, CSP_NONCE, PLATFORM_ID, Optional, ViewEncapsulation, ɵTracingService as _TracingService, RendererStyleFlags2 } from "@angular/core";
 var EVENT_MANAGER_PLUGINS = new InjectionToken(ngDevMode ? "EventManagerPlugins" : "");
 var EventManager = class _EventManager {
     _zone;
@@ -13,7 +13,7 @@ var EventManager = class _EventManager {
      */
     constructor(plugins, _zone) {
         this._zone = _zone;
-        plugins.forEach((plugin) => {
+        plugins.forEach(plugin => {
             plugin.manager = this;
         });
         this._plugins = plugins.slice().reverse();
@@ -45,23 +45,23 @@ var EventManager = class _EventManager {
             return plugin;
         }
         const plugins = this._plugins;
-        plugin = plugins.find((plugin2) => plugin2.supports(eventName));
+        plugin = plugins.find(plugin2 => plugin2.supports(eventName));
         if (!plugin) {
             throw new _RuntimeError(5101, (typeof ngDevMode === "undefined" || ngDevMode) && `No event manager plugin found for event ${eventName}`);
         }
         this._eventNameToPlugin.set(eventName, plugin);
         return plugin;
     }
-    static \u0275fac = function EventManager_Factory(__ngFactoryType__) {
-        return new (__ngFactoryType__ || _EventManager)(i0.\u0275\u0275inject(EVENT_MANAGER_PLUGINS), i0.\u0275\u0275inject(i0.NgZone));
+    static ɵfac = function EventManager_Factory(__ngFactoryType__) {
+        return new (__ngFactoryType__ || _EventManager)(i0.ɵɵinject(EVENT_MANAGER_PLUGINS), i0.ɵɵinject(i0.NgZone));
     };
-    static \u0275prov = /* @__PURE__ */ i0.\u0275\u0275defineInjectable({
+    static ɵprov = /* @__PURE__ */ i0.ɵɵdefineInjectable({
         token: _EventManager,
-        factory: _EventManager.\u0275fac
+        factory: _EventManager.ɵfac
     });
 };
 (() => {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.\u0275setClassMetadata(EventManager, [{
+    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(EventManager, [{
             type: Injectable
         }], () => [{
             type: void 0,
@@ -152,7 +152,7 @@ var SharedStylesHost = class _SharedStylesHost {
         for (const value of styles) {
             this.addUsage(value, this.inline, createStyleElement);
         }
-        urls?.forEach((value) => this.addUsage(value, this.external, createLinkElement));
+        urls?.forEach(value => this.addUsage(value, this.external, createLinkElement));
     }
     /**
      * Removes embedded styles from the DOM that were added as HTML `style` elements.
@@ -162,20 +162,20 @@ var SharedStylesHost = class _SharedStylesHost {
         for (const value of styles) {
             this.removeUsage(value, this.inline);
         }
-        urls?.forEach((value) => this.removeUsage(value, this.external));
+        urls?.forEach(value => this.removeUsage(value, this.external));
     }
     addUsage(value, usages, creator) {
         const record = usages.get(value);
         if (record) {
             if ((typeof ngDevMode === "undefined" || ngDevMode) && record.usage === 0) {
-                record.elements.forEach((element) => element.setAttribute("ng-style-reused", ""));
+                record.elements.forEach(element => element.setAttribute("ng-style-reused", ""));
             }
             record.usage++;
         }
         else {
             usages.set(value, {
                 usage: 1,
-                elements: [...this.hosts].map((host) => this.addElement(host, creator(value, this.doc)))
+                elements: [...this.hosts].map(host => this.addElement(host, creator(value, this.doc)))
             });
         }
     }
@@ -222,16 +222,16 @@ var SharedStylesHost = class _SharedStylesHost {
         }
         return host.appendChild(element);
     }
-    static \u0275fac = function SharedStylesHost_Factory(__ngFactoryType__) {
-        return new (__ngFactoryType__ || _SharedStylesHost)(i0.\u0275\u0275inject(DOCUMENT), i0.\u0275\u0275inject(APP_ID), i0.\u0275\u0275inject(CSP_NONCE, 8), i0.\u0275\u0275inject(PLATFORM_ID));
+    static ɵfac = function SharedStylesHost_Factory(__ngFactoryType__) {
+        return new (__ngFactoryType__ || _SharedStylesHost)(i0.ɵɵinject(DOCUMENT), i0.ɵɵinject(APP_ID), i0.ɵɵinject(CSP_NONCE, 8), i0.ɵɵinject(PLATFORM_ID));
     };
-    static \u0275prov = /* @__PURE__ */ i0.\u0275\u0275defineInjectable({
+    static ɵprov = /* @__PURE__ */ i0.ɵɵdefineInjectable({
         token: _SharedStylesHost,
-        factory: _SharedStylesHost.\u0275fac
+        factory: _SharedStylesHost.ɵfac
     });
 };
 (() => {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.\u0275setClassMetadata(SharedStylesHost, [{
+    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SharedStylesHost, [{
             type: Injectable
         }], () => [{
             type: Document,
@@ -287,14 +287,14 @@ function shimHostAttribute(componentShortId) {
     return HOST_ATTR.replace(COMPONENT_REGEX, componentShortId);
 }
 function shimStylesContent(compId, styles) {
-    return styles.map((s) => s.replace(COMPONENT_REGEX, compId));
+    return styles.map(s => s.replace(COMPONENT_REGEX, compId));
 }
 function addBaseHrefToCssSourceMap(baseHref, styles) {
     if (!baseHref) {
         return styles;
     }
     const absoluteBaseHrefUrl = new URL(baseHref, "http://localhost");
-    return styles.map((cssContent) => {
+    return styles.map(cssContent => {
         if (!cssContent.includes("sourceMappingURL=")) {
             return cssContent;
         }
@@ -386,16 +386,16 @@ var DomRendererFactory2 = class _DomRendererFactory2 {
     componentReplaced(componentId) {
         this.rendererByCompId.delete(componentId);
     }
-    static \u0275fac = function DomRendererFactory2_Factory(__ngFactoryType__) {
-        return new (__ngFactoryType__ || _DomRendererFactory2)(i0.\u0275\u0275inject(EventManager), i0.\u0275\u0275inject(SharedStylesHost), i0.\u0275\u0275inject(APP_ID), i0.\u0275\u0275inject(REMOVE_STYLES_ON_COMPONENT_DESTROY), i0.\u0275\u0275inject(DOCUMENT), i0.\u0275\u0275inject(PLATFORM_ID), i0.\u0275\u0275inject(i0.NgZone), i0.\u0275\u0275inject(CSP_NONCE), i0.\u0275\u0275inject(_TracingService, 8));
+    static ɵfac = function DomRendererFactory2_Factory(__ngFactoryType__) {
+        return new (__ngFactoryType__ || _DomRendererFactory2)(i0.ɵɵinject(EventManager), i0.ɵɵinject(SharedStylesHost), i0.ɵɵinject(APP_ID), i0.ɵɵinject(REMOVE_STYLES_ON_COMPONENT_DESTROY), i0.ɵɵinject(DOCUMENT), i0.ɵɵinject(PLATFORM_ID), i0.ɵɵinject(i0.NgZone), i0.ɵɵinject(CSP_NONCE), i0.ɵɵinject(_TracingService, 8));
     };
-    static \u0275prov = /* @__PURE__ */ i0.\u0275\u0275defineInjectable({
+    static ɵprov = /* @__PURE__ */ i0.ɵɵdefineInjectable({
         token: _DomRendererFactory2,
-        factory: _DomRendererFactory2.\u0275fac
+        factory: _DomRendererFactory2.ɵfac
     });
 };
 (() => {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.\u0275setClassMetadata(DomRendererFactory2, [{
+    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DomRendererFactory2, [{
             type: Injectable
         }], () => [{
             type: EventManager
@@ -434,7 +434,7 @@ var DomRendererFactory2 = class _DomRendererFactory2 {
                     args: [CSP_NONCE]
                 }]
         }, {
-            type: i0.\u0275TracingService,
+            type: i0.ɵTracingService,
             decorators: [{
                     type: Inject,
                     args: [_TracingService]
@@ -462,8 +462,7 @@ var DefaultDomRenderer2 = class {
         this.platformIsServer = platformIsServer;
         this.tracingService = tracingService;
     }
-    destroy() {
-    }
+    destroy() { }
     destroyNode = null;
     createElement(name, namespace) {
         if (namespace) {
@@ -582,7 +581,7 @@ var DefaultDomRenderer2 = class {
         return this.eventManager.addEventListener(target, event, wrappedCallback, options);
     }
     decoratePreventDefault(eventHandler) {
-        return (event) => {
+        return event => {
             if (event === "__ngUnwrap__") {
                 return eventHandler;
             }
@@ -708,9 +707,9 @@ var EmulatedEncapsulationDomRenderer2 = class extends NoneEncapsulationDomRender
     }
 };
 // node_modules/@angular/platform-browser/fesm2022/browser.mjs
-import { \u0275DomAdapter as _DomAdapter, \u0275setRootDomAdapter as _setRootDomAdapter, \u0275parseCookieValue as _parseCookieValue, \u0275getDOM as _getDOM2, DOCUMENT as DOCUMENT2, \u0275PLATFORM_BROWSER_ID as _PLATFORM_BROWSER_ID, XhrFactory, CommonModule } from "@angular/common";
+import { ɵDomAdapter as _DomAdapter, ɵsetRootDomAdapter as _setRootDomAdapter, ɵparseCookieValue as _parseCookieValue, ɵgetDOM as _getDOM2, DOCUMENT as DOCUMENT2, ɵPLATFORM_BROWSER_ID as _PLATFORM_BROWSER_ID, XhrFactory, CommonModule } from "@angular/common";
 import * as i02 from "@angular/core";
-import { \u0275global as _global, \u0275RuntimeError as _RuntimeError2, Injectable as Injectable2, Inject as Inject2, \u0275resolveComponentResources as _resolveComponentResources, \u0275internalCreateApplication as _internalCreateApplication, PLATFORM_ID as PLATFORM_ID2, PLATFORM_INITIALIZER, createPlatformFactory, platformCore, InjectionToken as InjectionToken2, \u0275TESTABILITY_GETTER as _TESTABILITY_GETTER, \u0275TESTABILITY as _TESTABILITY, Testability, NgZone as NgZone2, TestabilityRegistry, \u0275INJECTOR_SCOPE as _INJECTOR_SCOPE, ErrorHandler, RendererFactory2, inject, ApplicationModule, NgModule, \u0275setDocument as _setDocument } from "@angular/core";
+import { ɵglobal as _global, ɵRuntimeError as _RuntimeError2, Injectable as Injectable2, Inject as Inject2, ɵresolveComponentResources as _resolveComponentResources, ɵinternalCreateApplication as _internalCreateApplication, PLATFORM_ID as PLATFORM_ID2, PLATFORM_INITIALIZER, createPlatformFactory, platformCore, InjectionToken as InjectionToken2, ɵTESTABILITY_GETTER as _TESTABILITY_GETTER, ɵTESTABILITY as _TESTABILITY, Testability, NgZone as NgZone2, TestabilityRegistry, ɵINJECTOR_SCOPE as _INJECTOR_SCOPE, ErrorHandler, RendererFactory2, inject, ApplicationModule, NgModule, ɵsetDocument as _setDocument } from "@angular/core";
 var BrowserDomAdapter = class _BrowserDomAdapter extends _DomAdapter {
     supportsDOMEvents = true;
     static makeCurrent() {
@@ -790,7 +789,7 @@ var BrowserGetTestability = class {
         };
         _global["getAllAngularTestabilities"] = () => registry.getAllTestabilities();
         _global["getAllAngularRootElements"] = () => registry.getAllRootElements();
-        const whenAllStable = (callback) => {
+        const whenAllStable = callback => {
             const testabilities = _global["getAllAngularTestabilities"]();
             let count = testabilities.length;
             const decrement = function () {
@@ -799,7 +798,7 @@ var BrowserGetTestability = class {
                     callback();
                 }
             };
-            testabilities.forEach((testability) => {
+            testabilities.forEach(testability => {
                 testability.whenStable(decrement);
             });
         };
@@ -829,16 +828,16 @@ var BrowserXhr = class _BrowserXhr {
     build() {
         return new XMLHttpRequest();
     }
-    static \u0275fac = function BrowserXhr_Factory(__ngFactoryType__) {
+    static ɵfac = function BrowserXhr_Factory(__ngFactoryType__) {
         return new (__ngFactoryType__ || _BrowserXhr)();
     };
-    static \u0275prov = /* @__PURE__ */ i02.\u0275\u0275defineInjectable({
+    static ɵprov = /* @__PURE__ */ i02.ɵɵdefineInjectable({
         token: _BrowserXhr,
-        factory: _BrowserXhr.\u0275fac
+        factory: _BrowserXhr.ɵfac
     });
 };
 (() => {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i02.\u0275setClassMetadata(BrowserXhr, [{
+    (typeof ngDevMode === "undefined" || ngDevMode) && i02.ɵsetClassMetadata(BrowserXhr, [{
             type: Injectable2
         }], null, null);
 })();
@@ -858,16 +857,16 @@ var DomEventsPlugin = class _DomEventsPlugin extends EventManagerPlugin {
     removeEventListener(target, eventName, callback, options) {
         return target.removeEventListener(eventName, callback, options);
     }
-    static \u0275fac = function DomEventsPlugin_Factory(__ngFactoryType__) {
-        return new (__ngFactoryType__ || _DomEventsPlugin)(i02.\u0275\u0275inject(DOCUMENT2));
+    static ɵfac = function DomEventsPlugin_Factory(__ngFactoryType__) {
+        return new (__ngFactoryType__ || _DomEventsPlugin)(i02.ɵɵinject(DOCUMENT2));
     };
-    static \u0275prov = /* @__PURE__ */ i02.\u0275\u0275defineInjectable({
+    static ɵprov = /* @__PURE__ */ i02.ɵɵdefineInjectable({
         token: _DomEventsPlugin,
-        factory: _DomEventsPlugin.\u0275fac
+        factory: _DomEventsPlugin.ɵfac
     });
 };
 (() => {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i02.\u0275setClassMetadata(DomEventsPlugin, [{
+    (typeof ngDevMode === "undefined" || ngDevMode) && i02.ɵsetClassMetadata(DomEventsPlugin, [{
             type: Injectable2
         }], () => [{
             type: void 0,
@@ -894,10 +893,10 @@ var _keyMap = {
     "Win": "OS"
 };
 var MODIFIER_KEY_GETTERS = {
-    "alt": (event) => event.altKey,
-    "control": (event) => event.ctrlKey,
-    "meta": (event) => event.metaKey,
-    "shift": (event) => event.shiftKey
+    "alt": event => event.altKey,
+    "control": event => event.ctrlKey,
+    "meta": event => event.metaKey,
+    "shift": event => event.shiftKey
 };
 var KeyEventsPlugin = class _KeyEventsPlugin extends EventManagerPlugin {
     /**
@@ -952,7 +951,7 @@ var KeyEventsPlugin = class _KeyEventsPlugin extends EventManagerPlugin {
             parts.splice(codeIX, 1);
             fullKey = "code.";
         }
-        MODIFIER_KEYS.forEach((modifierName) => {
+        MODIFIER_KEYS.forEach(modifierName => {
             const index = parts.indexOf(modifierName);
             if (index > -1) {
                 parts.splice(index, 1);
@@ -994,7 +993,7 @@ var KeyEventsPlugin = class _KeyEventsPlugin extends EventManagerPlugin {
         else if (keycode === ".") {
             keycode = "dot";
         }
-        MODIFIER_KEYS.forEach((modifierName) => {
+        MODIFIER_KEYS.forEach(modifierName => {
             if (modifierName !== keycode) {
                 const modifierGetter = MODIFIER_KEY_GETTERS[modifierName];
                 if (modifierGetter(event)) {
@@ -1013,7 +1012,7 @@ var KeyEventsPlugin = class _KeyEventsPlugin extends EventManagerPlugin {
      * @returns A callback function.
      */
     static eventCallback(fullKey, handler, zone) {
-        return (event) => {
+        return event => {
             if (_KeyEventsPlugin.matchEventFullKeyCode(event, fullKey)) {
                 zone.runGuarded(() => handler(event));
             }
@@ -1023,16 +1022,16 @@ var KeyEventsPlugin = class _KeyEventsPlugin extends EventManagerPlugin {
     static _normalizeKey(keyName) {
         return keyName === "esc" ? "escape" : keyName;
     }
-    static \u0275fac = function KeyEventsPlugin_Factory(__ngFactoryType__) {
-        return new (__ngFactoryType__ || _KeyEventsPlugin)(i02.\u0275\u0275inject(DOCUMENT2));
+    static ɵfac = function KeyEventsPlugin_Factory(__ngFactoryType__) {
+        return new (__ngFactoryType__ || _KeyEventsPlugin)(i02.ɵɵinject(DOCUMENT2));
     };
-    static \u0275prov = /* @__PURE__ */ i02.\u0275\u0275defineInjectable({
+    static ɵprov = /* @__PURE__ */ i02.ɵɵdefineInjectable({
         token: _KeyEventsPlugin,
-        factory: _KeyEventsPlugin.\u0275fac
+        factory: _KeyEventsPlugin.ɵfac
     });
 };
 (() => {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i02.\u0275setClassMetadata(KeyEventsPlugin, [{
+    (typeof ngDevMode === "undefined" || ngDevMode) && i02.ɵsetClassMetadata(KeyEventsPlugin, [{
             type: Injectable2
         }], () => [{
             type: void 0,
@@ -1047,7 +1046,7 @@ function bootstrapApplication(rootComponent, options) {
         rootComponent
     }, createProvidersConfig(options));
     if (false) {
-        return _resolveComponentResources(fetch).catch((error) => {
+        return _resolveComponentResources(fetch).catch(error => {
             console.error(error);
             return Promise.resolve();
         }).then(() => _internalCreateApplication(config));
@@ -1059,7 +1058,7 @@ function createApplication(options) {
 }
 function createProvidersConfig(options) {
     return {
-        appProviders: [...BROWSER_MODULE_PROVIDERS, ...options?.providers ?? []],
+        appProviders: [...BROWSER_MODULE_PROVIDERS, ...(options?.providers ?? [])],
         platformProviders: INTERNAL_BROWSER_PLATFORM_PROVIDERS
     };
 }
@@ -1140,19 +1139,19 @@ var BrowserModule = class _BrowserModule {
             }
         }
     }
-    static \u0275fac = function BrowserModule_Factory(__ngFactoryType__) {
+    static ɵfac = function BrowserModule_Factory(__ngFactoryType__) {
         return new (__ngFactoryType__ || _BrowserModule)();
     };
-    static \u0275mod = /* @__PURE__ */ i02.\u0275\u0275defineNgModule({
+    static ɵmod = /* @__PURE__ */ i02.ɵɵdefineNgModule({
         type: _BrowserModule
     });
-    static \u0275inj = /* @__PURE__ */ i02.\u0275\u0275defineInjector({
+    static ɵinj = /* @__PURE__ */ i02.ɵɵdefineInjector({
         providers: [...BROWSER_MODULE_PROVIDERS, ...TESTABILITY_PROVIDERS],
         imports: [CommonModule, ApplicationModule]
     });
 };
 (() => {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i02.\u0275setClassMetadata(BrowserModule, [{
+    (typeof ngDevMode === "undefined" || ngDevMode) && i02.ɵsetClassMetadata(BrowserModule, [{
             type: NgModule,
             args: [{
                     providers: [...BROWSER_MODULE_PROVIDERS, ...TESTABILITY_PROVIDERS],
@@ -1170,5 +1169,4 @@ export { EVENT_MANAGER_PLUGINS, EventManager, EventManagerPlugin, SharedStylesHo
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
-*/
-//# sourceMappingURL=chunk-KIHSKLLA.js.map
+*/ 

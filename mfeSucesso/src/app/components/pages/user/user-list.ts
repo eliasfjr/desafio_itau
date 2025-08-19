@@ -16,13 +16,18 @@ export class UserList implements OnInit {
 
   public getUserList() {
     this.userService.getUsers()
-    .subscribe(
-      response => this.users = response
-    )
+      .subscribe(
+        response => this.users = response
+      )
+  }
+
+  public updateTitle(title: string, icon: string) {
+    window.dispatchEvent(new CustomEvent("updateTitle", { detail: { title: title, icon:  icon} }));
   }
 
   public ngOnInit(): void {
     this.getUserList();
+    this.updateTitle("Lista de usuários", "view_headline");
   }
 
 

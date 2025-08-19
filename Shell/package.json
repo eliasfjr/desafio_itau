@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:jsonserver": "json-server --watch db.json",
+    "start:jsonserver": "json-server --watch db.json --port 3000",
     "start:shell": "ng serve --port 4200",
     "start:cadastro": "cd.. && cd mfeCadastro && ng serve --port 4201",
     "start:sucesso": "cd.. && cd mfeSucesso && ng serve --port 4202",

@@ -8,9 +8,20 @@
         height: 4rem;
         transition: width var(--transition-duration);
         display: flex;
+        justify-content: space-between;
         color: var(--topbar-item-text-color);
         background: var(--topbar-bg);
         box-shadow: 0 1px 2px #0000001f, 0 4px 5px #00000024, 0 2px 4px -1px #0003;
+
+        & > div {
+            display: flex;
+            align-items: center;
+        }
+
+        &-userfield {
+            padding: 0px 30px;
+            gap: 9px;
+        }
 
         &-text {
             margin-left: 3px;
@@ -43,6 +54,10 @@
         margin-left: 15rem;
         padding-top: 4rem;
         transition: margin-left .3s cubic-bezier(0, 0, .2, 1);
+
+        @media (max-width: 700px) {
+            margin-left: 0px;
+        }
 
         &-header {
             align-items: center;

@@ -78,8 +78,12 @@ var UserList = class _UserList {
   getUserList() {
     this.userService.getUsers().subscribe((response) => this.users = response);
   }
+  updateTitle(title, icon) {
+    window.dispatchEvent(new CustomEvent("updateTitle", { detail: { title, icon } }));
+  }
   ngOnInit() {
     this.getUserList();
+    this.updateTitle("Lista de usu\xE1rios", "view_headline");
   }
   static \u0275fac = function UserList_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _UserList)(i02.\u0275\u0275directiveInject(UserService));
