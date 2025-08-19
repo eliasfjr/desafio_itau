@@ -17,97 +17,43 @@ var AnimationMetadataType;
 })(AnimationMetadataType || (AnimationMetadataType = {}));
 var AUTO_STYLE = "*";
 function trigger(name, definitions) {
-    return {
-        type: AnimationMetadataType.Trigger,
-        name,
-        definitions,
-        options: {}
-    };
+    return { type: AnimationMetadataType.Trigger, name, definitions, options: {} };
 }
 function animate(timings, styles = null) {
-    return {
-        type: AnimationMetadataType.Animate,
-        styles,
-        timings
-    };
+    return { type: AnimationMetadataType.Animate, styles, timings };
 }
 function group(steps, options = null) {
-    return {
-        type: AnimationMetadataType.Group,
-        steps,
-        options
-    };
+    return { type: AnimationMetadataType.Group, steps, options };
 }
 function sequence(steps, options = null) {
-    return {
-        type: AnimationMetadataType.Sequence,
-        steps,
-        options
-    };
+    return { type: AnimationMetadataType.Sequence, steps, options };
 }
 function style(tokens) {
-    return {
-        type: AnimationMetadataType.Style,
-        styles: tokens,
-        offset: null
-    };
+    return { type: AnimationMetadataType.Style, styles: tokens, offset: null };
 }
 function state(name, styles, options) {
-    return {
-        type: AnimationMetadataType.State,
-        name,
-        styles,
-        options
-    };
+    return { type: AnimationMetadataType.State, name, styles, options };
 }
 function keyframes(steps) {
-    return {
-        type: AnimationMetadataType.Keyframes,
-        steps
-    };
+    return { type: AnimationMetadataType.Keyframes, steps };
 }
 function transition(stateChangeExpr, steps, options = null) {
-    return {
-        type: AnimationMetadataType.Transition,
-        expr: stateChangeExpr,
-        animation: steps,
-        options
-    };
+    return { type: AnimationMetadataType.Transition, expr: stateChangeExpr, animation: steps, options };
 }
 function animation(steps, options = null) {
-    return {
-        type: AnimationMetadataType.Reference,
-        animation: steps,
-        options
-    };
+    return { type: AnimationMetadataType.Reference, animation: steps, options };
 }
 function animateChild(options = null) {
-    return {
-        type: AnimationMetadataType.AnimateChild,
-        options
-    };
+    return { type: AnimationMetadataType.AnimateChild, options };
 }
 function useAnimation(animation2, options = null) {
-    return {
-        type: AnimationMetadataType.AnimateRef,
-        animation: animation2,
-        options
-    };
+    return { type: AnimationMetadataType.AnimateRef, animation: animation2, options };
 }
 function query(selector, animation2, options = null) {
-    return {
-        type: AnimationMetadataType.Query,
-        selector,
-        animation: animation2,
-        options
-    };
+    return { type: AnimationMetadataType.Query, selector, animation: animation2, options };
 }
 function stagger(timings, animation2) {
-    return {
-        type: AnimationMetadataType.Stagger,
-        timings,
-        animation: animation2
-    };
+    return { type: AnimationMetadataType.Stagger, timings, animation: animation2 };
 }
 var NoopAnimationPlayer = class {
     _onDoneFns = [];
@@ -127,7 +73,7 @@ var NoopAnimationPlayer = class {
     _onFinish() {
         if (!this._finished) {
             this._finished = true;
-            this._onDoneFns.forEach(fn => fn());
+            this._onDoneFns.forEach((fn) => fn());
             this._onDoneFns = [];
         }
     }
@@ -145,7 +91,8 @@ var NoopAnimationPlayer = class {
     hasStarted() {
         return this._started;
     }
-    init() { }
+    init() {
+    }
     play() {
         if (!this.hasStarted()) {
             this._onStart();
@@ -158,11 +105,13 @@ var NoopAnimationPlayer = class {
         queueMicrotask(() => this._onFinish());
     }
     _onStart() {
-        this._onStartFns.forEach(fn => fn());
+        this._onStartFns.forEach((fn) => fn());
         this._onStartFns = [];
     }
-    pause() { }
-    restart() { }
+    pause() {
+    }
+    restart() {
+    }
     finish() {
         this._onFinish();
     }
@@ -173,7 +122,7 @@ var NoopAnimationPlayer = class {
                 this._onStart();
             }
             this.finish();
-            this._onDestroyFns.forEach(fn => fn());
+            this._onDestroyFns.forEach((fn) => fn());
             this._onDestroyFns = [];
         }
     }
@@ -192,7 +141,7 @@ var NoopAnimationPlayer = class {
     /** @internal */
     triggerCallback(phaseName) {
         const methods = phaseName == "start" ? this._onStartFns : this._onDoneFns;
-        methods.forEach(fn => fn());
+        methods.forEach((fn) => fn());
         methods.length = 0;
     }
 };
@@ -216,7 +165,7 @@ var AnimationGroupPlayer = class {
             queueMicrotask(() => this._onFinish());
         }
         else {
-            this.players.forEach(player => {
+            this.players.forEach((player) => {
                 player.onDone(() => {
                     if (++doneCount == total) {
                         this._onFinish();
@@ -239,12 +188,12 @@ var AnimationGroupPlayer = class {
     _onFinish() {
         if (!this._finished) {
             this._finished = true;
-            this._onDoneFns.forEach(fn => fn());
+            this._onDoneFns.forEach((fn) => fn());
             this._onDoneFns = [];
         }
     }
     init() {
-        this.players.forEach(player => player.init());
+        this.players.forEach((player) => player.init());
     }
     onStart(fn) {
         this._onStartFns.push(fn);
@@ -252,7 +201,7 @@ var AnimationGroupPlayer = class {
     _onStart() {
         if (!this.hasStarted()) {
             this._started = true;
-            this._onStartFns.forEach(fn => fn());
+            this._onStartFns.forEach((fn) => fn());
             this._onStartFns = [];
         }
     }
@@ -270,17 +219,17 @@ var AnimationGroupPlayer = class {
             this.init();
         }
         this._onStart();
-        this.players.forEach(player => player.play());
+        this.players.forEach((player) => player.play());
     }
     pause() {
-        this.players.forEach(player => player.pause());
+        this.players.forEach((player) => player.pause());
     }
     restart() {
-        this.players.forEach(player => player.restart());
+        this.players.forEach((player) => player.restart());
     }
     finish() {
         this._onFinish();
-        this.players.forEach(player => player.finish());
+        this.players.forEach((player) => player.finish());
     }
     destroy() {
         this._onDestroy();
@@ -289,20 +238,20 @@ var AnimationGroupPlayer = class {
         if (!this._destroyed) {
             this._destroyed = true;
             this._onFinish();
-            this.players.forEach(player => player.destroy());
-            this._onDestroyFns.forEach(fn => fn());
+            this.players.forEach((player) => player.destroy());
+            this._onDestroyFns.forEach((fn) => fn());
             this._onDestroyFns = [];
         }
     }
     reset() {
-        this.players.forEach(player => player.reset());
+        this.players.forEach((player) => player.reset());
         this._destroyed = false;
         this._finished = false;
         this._started = false;
     }
     setPosition(p) {
         const timeAtPosition = p * this.totalTime;
-        this.players.forEach(player => {
+        this.players.forEach((player) => {
             const position = player.totalTime ? Math.min(1, timeAtPosition / player.totalTime) : 1;
             player.setPosition(position);
         });
@@ -315,7 +264,7 @@ var AnimationGroupPlayer = class {
         return longestPlayer != null ? longestPlayer.getPosition() : 0;
     }
     beforeDestroy() {
-        this.players.forEach(player => {
+        this.players.forEach((player) => {
             if (player.beforeDestroy) {
                 player.beforeDestroy();
             }
@@ -324,11 +273,11 @@ var AnimationGroupPlayer = class {
     /** @internal */
     triggerCallback(phaseName) {
         const methods = phaseName == "start" ? this._onStartFns : this._onDoneFns;
-        methods.forEach(fn => fn());
+        methods.forEach((fn) => fn());
         methods.length = 0;
     }
 };
-var ɵPRE_STYLE = "!";
+var \u0275PRE_STYLE = "!";
 export { AnimationMetadataType, AUTO_STYLE, trigger, animate, group, sequence, style, state, keyframes, transition, animation, animateChild, useAnimation, query, stagger, NoopAnimationPlayer, AnimationGroupPlayer, ɵPRE_STYLE };
 /*! Bundled license information:
 
@@ -338,4 +287,5 @@ export { AnimationMetadataType, AUTO_STYLE, trigger, animate, group, sequence, s
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
-*/ 
+*/
+//# sourceMappingURL=chunk-5EOSH2O6.js.map

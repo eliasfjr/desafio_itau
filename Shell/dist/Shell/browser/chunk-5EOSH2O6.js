@@ -338,4 +338,4 @@ export { AnimationMetadataType, AUTO_STYLE, trigger, animate, group, sequence, s
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
-*/ 
+*/

@@ -3,7 +3,7 @@
   "shared": [
     {
       "packageName": "@angular/animations",
-      "outFileName": "_angular_animations.iJE9J_TqiB-dev.js",
+      "outFileName": "_angular_animations.uoe01jKZUV-dev.js",
       "requiredVersion": "^20.1.7",
       "singleton": true,
       "strictVersion": true,
@@ -11,7 +11,7 @@
     },
     {
       "packageName": "@angular/animations/browser",
-      "outFileName": "_angular_animations_browser.6OSiRL9u1c-dev.js",
+      "outFileName": "_angular_animations_browser.EM19quK_gk-dev.js",
       "requiredVersion": "^20.1.7",
       "singleton": true,
       "strictVersion": true,
@@ -19,7 +19,7 @@
     },
     {
       "packageName": "@angular/common",
-      "outFileName": "_angular_common.RoIFog7HGO-dev.js",
+      "outFileName": "_angular_common.DASGvK2cxi-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -27,7 +27,7 @@
     },
     {
       "packageName": "@angular/common/http",
-      "outFileName": "_angular_common_http.oTiYByQnc1-dev.js",
+      "outFileName": "_angular_common_http.0j_johggoR-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -35,7 +35,7 @@
     },
     {
       "packageName": "@angular/core",
-      "outFileName": "_angular_core.nbvJQtz9qh-dev.js",
+      "outFileName": "_angular_core.R098Yx694i-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -43,7 +43,7 @@
     },
     {
       "packageName": "@angular/core/primitives/di",
-      "outFileName": "_angular_core_primitives_di.jW_8e8Eewt-dev.js",
+      "outFileName": "_angular_core_primitives_di.fKdezNIH_i-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -51,7 +51,7 @@
     },
     {
       "packageName": "@angular/core/primitives/signals",
-      "outFileName": "_angular_core_primitives_signals.Cg74mBiiye-dev.js",
+      "outFileName": "_angular_core_primitives_signals.l6SzOCNw8s-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -59,7 +59,7 @@
     },
     {
       "packageName": "@angular/forms",
-      "outFileName": "_angular_forms.qoYDDKbty1-dev.js",
+      "outFileName": "_angular_forms.Bq9rCyEsmS-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -67,7 +67,7 @@
     },
     {
       "packageName": "@angular/platform-browser",
-      "outFileName": "_angular_platform_browser.wg19tDeZFA-dev.js",
+      "outFileName": "_angular_platform_browser.F6xsuycfIu-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -75,7 +75,7 @@
     },
     {
       "packageName": "@angular/platform-browser/animations",
-      "outFileName": "_angular_platform_browser_animations.BHLvJMiqWt-dev.js",
+      "outFileName": "_angular_platform_browser_animations.L797UNkUIX-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -83,7 +83,7 @@
     },
     {
       "packageName": "@angular/router",
-      "outFileName": "_angular_router.BtwOkP67TZ-dev.js",
+      "outFileName": "_angular_router.6_ZcuoN9KJ-dev.js",
       "requiredVersion": "^20.1.0",
       "singleton": true,
       "strictVersion": true,
@@ -91,7 +91,7 @@
     },
     {
       "packageName": "ngx-toastr",
-      "outFileName": "ngx_toastr.pc6T9muVpD-dev.js",
+      "outFileName": "ngx_toastr._vrC6G0GPU-dev.js",
       "requiredVersion": "^19.0.0",
       "singleton": true,
       "strictVersion": true,
@@ -99,7 +99,7 @@
     },
     {
       "packageName": "rxjs",
-      "outFileName": "rxjs.NUZVGrMywl-dev.js",
+      "outFileName": "rxjs.tCXua_onN6-dev.js",
       "requiredVersion": "~7.8.0",
       "singleton": true,
       "strictVersion": true,
@@ -107,7 +107,7 @@
     },
     {
       "packageName": "rxjs/operators",
-      "outFileName": "rxjs_operators.US5OWl9gfn-dev.js",
+      "outFileName": "rxjs_operators.zecDt6fVdG-dev.js",
       "requiredVersion": "~7.8.0",
       "singleton": true,
       "strictVersion": true,
@@ -115,7 +115,7 @@
     },
     {
       "packageName": "tslib",
-      "outFileName": "tslib.HG7PgLFoV4-dev.js",
+      "outFileName": "tslib.FWJt4MOBSq-dev.js",
       "requiredVersion": "^2.3.0",
       "singleton": true,
       "strictVersion": true,
@@ -183,7 +183,7 @@
       "key": "./Component",
       "outFileName": "Component.js",
       "dev": {
-        "entryPoint": "C:/Projetos/Desafio/mfeCadastro/src/app/components/pages/user/new-user.ts"
+        "entryPoint": "C:/Projetos/Desafio/desafio_itau/mfeCadastro/src/app/components/pages/user/new-user.ts"
       }
     }
   ],

@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:jsonserver": "json-server --watch db.json",
+    "start:shell": "ng serve --port 4200",
+    "start:cadastro": "cd.. && cd mfeCadastro && ng serve --port 4201",
+    "start:sucesso": "cd.. && cd mfeSucesso && ng serve --port 4202",
+    "start": "concurrently \"npm run start:jsonserver\" \"npm run start:shell\" \"npm run start:cadastro\" \"npm run start:sucesso\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

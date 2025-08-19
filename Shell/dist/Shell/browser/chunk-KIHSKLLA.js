@@ -1169,4 +1169,4 @@ export { EVENT_MANAGER_PLUGINS, EventManager, EventManagerPlugin, SharedStylesHo
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
-*/ 
+*/

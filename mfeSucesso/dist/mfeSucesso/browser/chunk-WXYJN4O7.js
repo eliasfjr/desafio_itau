@@ -13,7 +13,7 @@ function inject(token, options) {
     if (!currentInjector) {
         throw new Error("Current injector is not set.");
     }
-    if (!token.ɵprov) {
+    if (!token.\u0275prov) {
         throw new Error("Token is not an injectable");
     }
     return currentInjector.retrieve(token, options);
@@ -37,4 +37,5 @@ export { getCurrentInjector, setCurrentInjector, inject, NOT_FOUND, NotFoundErro
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
-*/ 
+*/
+//# sourceMappingURL=chunk-WXYJN4O7.js.map
