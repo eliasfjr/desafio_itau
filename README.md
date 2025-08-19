@@ -14,11 +14,16 @@ Toda a comunicação de dados é feita via json-server, ou seja, não há comuni
 # Como executar o projeto?
 ### Clone o repositório no link abaixo
 `git clone https://github.com/eliasfjr/desafio_itau.git`<br />
-`cd desafio_itau`
+`cd .\desafio_itau\`
 
 ### Instale os pacotes NPM
-Instale os pacotes npm descritos no arquivo package.json e verifique se funciona:<br /><br />
-`npm install`<br />
+Instale os pacotes npm das 3 aplicaçoes do projeto e verifique se funcinou:<br /><br />
+`cd .\Shell\` e `npm install`<br />
+`cd .\mfeCadastro\` e `npm install`<br />
+`cd .\mfeSucesso\` e `npm install`
+
+### Navegue até a aplicação Shell e execute o comando `npm start`
+`cd .\Shell\`<br />
 `npm start`
 
 ### O Comando `npm start` irá iniciar a aplicação da seguinte forma:
